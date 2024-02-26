@@ -40,10 +40,10 @@ body {
         text-decoration: none;
  }
 
- /* .section {
+ .section {
         padding-top: 120px;
         padding-bottom: 120px;
- } */
+ }
 
  .visually-hidden {
         position: absolute;
@@ -281,11 +281,12 @@ body {
 
         }
 
-@media screen and (min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+       screen and (min-resolutioin: 2dppx) and (max-width: 767px),
+       screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         .hero {
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/mobile-people-office@2x.jpg);
-        }
-                
+         }                
         }
 
         .main-title {
@@ -559,26 +560,156 @@ body {
         .review-form-submit-btn:focus {
                 background-color: #404BBF;
         }
+
+/* =====MOBILE BENEFITS STALY===== */ 
+
+        .benefits-title {
+                margin-bottom: 8px;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 0.9;
+                letter-spacing: 0.02em;
+                text-align: center;
+                color: #2E2F42;
+        }  
         
+        .benefits-paragraph {              
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color:#434455;                      
+        }
+        
+@media screen and (max-width: 767px) {
+
+        .benefist-icon {
+                display: none;
+        }
+
+       .benefits-item {
+        margin-bottom: 72px;
+       }
+
+       .benefits-item:last-child {
+        margin-bottom: 0;
+       }
+}
+
+/* =====MOBILE TEAM-OUR STALY===== */ 
+    
+        .team-our {
+                background: #F4F4FD;
+        }
+
+       .team-our-title {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 72px;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.11;        
+        letter-spacing: 0.02em; 
+        color: #2E2F42;  
+       }
+
+       .team-title-paragraph {
+        padding: 32px 0;
+        max-width: 264px;
+        border-radius: 0px 0px 4px 4px;
+        background: #fff;
+        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-title {
+        text-align: center;
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2E2F42;
+}
+
+.team-paragraph {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+}
+
+
+.social-list {
+        display: flex;
+        justify-content: center; 
+        column-gap: 24px;
+}
+
+.social-list-item {
+        width: 40px;
+        height: 40px;
+}
+
+ .social-list-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%; 
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+        background-color: #404bbf;
+} 
+
+
+.social-list-svg {
+        fill:  #f4f4fd;
+}
+
+@media screen and (max-width: 767px) {
+        .team { 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 60px;          
+        }
+}
+
+/* =====MOBILE STALY===== */ 
+
+
 /* =====TABLET HEDER STALY===== */
 
-@media (min-width: 768px) and (max-width:1187px) {
+@media (min-width: 768px) and (max-width: 1187px) {
         .container{
                 max-width: 768px;
                 padding: 0 15px;
                 margin-left: auto;
                 margin-right: auto;
-
+                
         } 
-
+        
         .mobile-menu-open-btn {
                 display: none;
         } 
-
+        
         .mobile-menu-wrapper {
                 display: none;
         } 
-
+        
         .menu-item::after {
                 display: block;
                 margin-left: auto;
@@ -591,9 +722,9 @@ body {
                 height: 4px;
                 border-radius: 2px;
                 background-color: #404BBF;
-        
+                
         }
-
+        
         .menu-link { 
                 position: relative;  
                 display: block;
@@ -604,7 +735,7 @@ body {
                 padding: 24px 0;
                 color:#2E2F42;
         } 
-
+        
         .menu-link:hover,
         .menu-link:focus {
                 color: #4D5AE5;
@@ -613,13 +744,13 @@ body {
         .menu-item:first-child .menu-link {
                 color: #404BBF;
         }
-
+        
         .address {
                 display: flex;
                 flex-direction: column;
                 row-gap: 8px;
         }
-
+        
         .address-link {
                 display: block;
                 font-size: 12px;
@@ -630,18 +761,18 @@ body {
                 padding-top: 12px;
                 color: #434455;
         }
-
+        
         .address-item:last-child .address-link {
                 padding-top: 0;
         }
-
+        
         .address-link:hover,
         .address-link:focus {
                 color: #4D5AE5;
         }
         
-/* =====TABLET HERO STALY===== */
-
+        /* =====TABLET HERO STALY===== */
+        
         .hero {
                 max-width: 768px;
                 margin-left: auto;
@@ -653,33 +784,71 @@ body {
                 background-color: #2E2F42;
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/tablet-people-office.jpg);
         }
-@media screen and (min-resolution: 192dpi) { 
-        .hero {
-                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/tablet-people-office@2x.jpg);
+        @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+        screen and (min-resolutioin: 2dppx) and (min-width: 768px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 768px) { 
+                .hero {
+                        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/tablet-people-office@2x.jpg);
+                }
         }
-}
-
+        
         .main-title {
                 max-width: 496px;
                 font-size: 56px;              
                 line-height: 0.93; 
                 text-transform: none;             
         }
-
+        
         .button-order {
                 margin-top: 50px;
         }
-
+        
         /* MODAL WINDOW TABLET */
-
+        
         .modal {
                 width: 408px;
+        }
+}
+
+/* =====TABLET BENEFITS STALY===== */ 
+
+@media (min-width: 768px) and (max-width: 1187px) {
+        
+        .benefist-icon {
+                display: none;
+        }
+        
+        .benefits {      
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 100px;
+                column-gap: 24px;
+        } 
+        
+        .benefits li {
+                width: 356px;
+        }
+        
+        .benefits-title {
+                text-align: left;
+        }
+
+/* =====TABLET TEAM-OUR STALY===== */ 
+
+        .team {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                row-gap: 48px;
+                column-gap: 24px;
         }
 }
 
 /* =====DESKTOP HEDER STALY===== */
 
 @media (min-width: 1188px) {
+        
         .container{
                 max-width: 1188px;
                 margin-left: auto;
@@ -687,7 +856,7 @@ body {
                 padding-left: 15px;
                 padding-right: 15px;
         }
-
+        
         .mobile-menu-open-btn {
                 display: none;
         } 
@@ -756,7 +925,7 @@ body {
                 color: #4D5AE5;
         }
         
-        /* =====DESKTOP HERO STALY===== */
+/* =====DESKTOP HERO STALY===== */
 
         .hero {
                 max-width: 1440px;
@@ -771,10 +940,12 @@ body {
                 url(../images/hero/people-office.jpg);
         }
 
-@media screen and (min-resolution: 192dpi) { 
-                .hero {
+@media screen and (min-resolution: 192dpi) and (min-width: 1188px),
+       screen and (min-resolutioin: 2dppx) and (min-width: 1188px),
+       screen and (min-device-pixel-ratio: 2) and (min-width: 1188px) { 
+        .hero {
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office@2x.jpg);
-                }
+         }
         }
 
         .main-title {
@@ -793,6 +964,38 @@ body {
         .modal {
                 width: 408px;
         }
-        
 
+ /* =====DEKSTOP BENEFITS STALY===== */ 
+
+        .benefits {
+                display: flex;
+                column-gap: 24px; 
+        }
+
+        .ben-our-item { 
+                width: calc((100% - 72px) / 4);
+        }  
+
+        .benefist-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 112px;
+                margin-bottom: 8px;
+                border-radius: 4px; 
+                background-color: #f4f4fd;
+        }
+        
+        .benefits-title {
+                font-size: 20px;
+                line-height: 1.2;
+                text-align: left;
+        }
+
+ /* =====TABLET TEAM-OUR STALY===== */ 
+
+        .team {
+               display: flex;
+               column-gap: 24px;
+        }
 }
